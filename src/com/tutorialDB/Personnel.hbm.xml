@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 juin 2008 20:30:32 by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tutorialDB.Personnel" table="personnel" catalog="tutorialDB">
+        <id name="idPersonnel" type="java.lang.Integer">
+            <column name="id_personnel" />
+            <generator class="increment" />
+        </id>
+        <property name="idDept" type="java.lang.Integer">
+            <column name="id_dept" />
+        </property>
+        <property name="nomPersonnel" type="string">
+            <column name="nom_personnel" length="20" />
+        </property>
+        <property name="prenomPersonnel" type="string">
+            <column name="prenom_personnel" length="20" />
+        </property>
+        <property name="dateNaissance" type="date">
+            <column name="date_naissance" length="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 juin 2008 20:30:32 by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tutorialDB.Dept" table="dept" catalog="tutorialDB">
+        <id name="idDept" type="java.lang.Integer">
+            <column name="id_dept" />
+            <generator class="increment" />
+        </id>
+        <property name="nomDept" type="string">
+            <column name="nom_dept" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

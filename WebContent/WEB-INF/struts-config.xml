@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config 
+PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+<struts-config>
+
+  	<form-beans type="org.apache.struts.action.ActionFormBean">
+	  <form-bean name="deptForm" type="com.struts.data.DeptForm" />
+	  <form-bean name="personnelForm" type="com.struts.data.PersonnelForm" />
+	</form-beans>
+
+	<action-mappings type="org.apache.struts.action.ActionMapping">
+		<action path="/dept" input="/dept_form.jsp" scope="request"
+		name="deptForm" type="com.struts.controleur.AjoutDeptAction">
+		  <forward name="succes" path="/dept_succes.jsp" redirect="false" />
+		  <forward name="echec" path="/dept_form.jsp" redirect="false" />
+		</action>
+		 
+		<action path="/personnel" input="/personnel_form.jsp" scope="request"
+		name="personnelForm" type="com.struts.controleur.AjoutPersAction">
+		  <forward name="succes" path="/personnel_succes.jsp" redirect="false" />
+		  <forward name="echec" path="/personnel_form.jsp" redirect="false" />
+		</action>
+	</action-mappings>
+
+</struts-config>
